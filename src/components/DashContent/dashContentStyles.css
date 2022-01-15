@@ -267,9 +267,9 @@
 }
 
 .accordion__desc {
-    width: 80%;
+    width: 70%;
     text-align: left;
-    margin-left: 5.4em;
+    margin-left: 4.5em;
     color: var(--title-color);
     font-size: 0.8em;
 }
@@ -293,6 +293,11 @@
 .activity__icon img {
     width: 50px;
     margin-right: 1em;
+}
+
+.highlight {
+    color: #1883FF;
+    font-weight: 600;
 }
 
 
@@ -396,6 +401,10 @@
 .overview__data__header {
     display: flex;
     align-items: center;
+}
+
+.overview__data__header .title {
+    color: var(--title-color);
 }
 
 .overview__data__body {
@@ -514,6 +523,7 @@
         padding: 0.5em;
         background-color: white;
         align-items: center;
+        font-size: 1.1em;
     }
     .events__thumbs {
         display: flex;
@@ -563,6 +573,12 @@
 }
 
 @media screen and (max-width: 899.20px) {
+    /* ALL SECTIONS */
+    .dashboard__section,
+    .events__,
+    .activity__section {
+        max-width: 90%;
+    }
     /* DASHBOARD SECTION */
     .dash__app {
         max-width: 100%;
@@ -670,7 +686,7 @@
         justify-content: flex-start;
     }
     .events__right__title {
-        width: 40%;
+        width: 50%;
     }
     .divider__both {
         width: 100%;
@@ -695,6 +711,9 @@
     }
     .events__thumbs__right {
         display: flex;
+    }
+    .accordion__arrow {
+        display: none;
     }
     /* END EVENTS SECTION*/
     /* ACTIVITY SECTION */
@@ -725,8 +744,8 @@
         gap: 1em;
     }
     .progress__overview__data__right {
-        margin-right: 3em;
-        margin-left: 3em;
+        margin-right: 1.51em;
+        margin-left: 1.51em;
     }
     .data__left {
         border-bottom: none;
@@ -750,5 +769,9 @@
         object-fit: cover;
         object-position: 5% 20%;
         border-radius: 0.5em;
+    }
+    .accordion__title {
+        font-size: 0.8em;
+        width: 80%;
     }
 }

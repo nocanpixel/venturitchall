@@ -32,21 +32,54 @@ const barStyleMobile = {
 const notificationData = [
     {
         id: 1,
-        img: '/images/notification-thumb.png',
+        img: './images/notification-thumb.png',
         title: 'You have a new session to re..',
         date: 'Today, 10:30AM'
     },
     {
         id: 2,
-        img: '/images/notification-thumb.png',
+        img: './images/notification-thumb.png',
         title: 'You have a virtual session..',
         date: 'Yesterday, 9:45'
     },
     {
         id: 3,
-        img: '/images/notification-thumb.png',
+        img: './images/notification-thumb.png',
         title: 'You have a face to face sta..',
         date: 'Yesterday, 10:00PM'
+    },
+]
+
+const menuItems = [
+    {
+        id:1,
+        name: 'Home',
+        href: '#',
+        cName: 'nav-links'
+    },
+    {
+        id:2,
+        name: 'App',
+        href: '#reports',
+        cName: 'nav-links'
+    },
+    {
+        id:3,
+        name: 'Reports',
+        href: '#reports',
+        cName: 'nav-links'
+    },
+    {
+        id:4,
+        name: 'Receipt',
+        href: '#receipt',
+        cName: 'nav-links'
+    },
+    {
+        id:5,
+        name: 'Chat',
+        href: '#chat',
+        cName: 'nav-links'
     },
 ]
 
@@ -61,13 +94,22 @@ export default function Navbar() {
                 <div className='navbar__'>
                     <div>
                         <div className='navbar__content'>
-                            <div className="menu__" onClick={() => handleMenu()}>
+                            <div className="menu__" style={{cursor:'pointer'}} onClick={() => handleMenu()}>
                                 {menuClicked ? <CloseIcon style={{ color: '#d5d5d5', fontSize: '2.3rem' }} /> : <MenuIcon style={{ color: '#d5d5d5', fontSize: '2.3rem' }} />}
                             </div>
+                            <ul className={menuClicked ? 'nav-menu active': 'nav-menu'}>
+                                {menuItems.map((item)=>(
+                                    <li key={item.id}>
+                                        <a href={item.href} className={item.cName}>
+                                            {item.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
                             {/* eslint-disable-next-line */}
                             <a href="#">
                             <div className="logo__">
-                                <img src={`/images/Group.png`} alt="" />
+                                <img src={`./images/Group.png`} alt="" />
                             </div>
                             </a>
                             <div className="search__bar">
@@ -119,13 +161,13 @@ export default function Navbar() {
                                     >
                                         <Tooltip title="Notifications">
                                             <div className='profile__notifications' style={{ cursor: 'pointer' }}>
-                                                <img style={{ width: '1rem', paddingTop: '5px' }} src={`/images/notification.png`} alt="" />
+                                                <img style={{ width: '1rem', paddingTop: '5px' }} src={`./images/notification.png`} alt="" />
                                             </div>
                                         </Tooltip>
                                     </OverlayTrigger>
                                     <Tooltip title="Messages">
                                     <div className='profile__chat' style={{ cursor: 'pointer' }}>
-                                        <img style={{ width: '1.2rem', paddingTop: '5px' }} src={`/images/chat.png`} alt="" />
+                                        <img style={{ width: '1.2rem', paddingTop: '5px' }} src={`./images/chat.png`} alt="" />
                                     </div>
                                     </Tooltip>
                                 </div>
@@ -137,11 +179,11 @@ export default function Navbar() {
                                 <div className='profile__user'>
                                     <Tooltip title="User profile">
                                     <div className='user_picture'>
-                                        <img src={`/images/Picture.png`} alt="Picture_profile" />
+                                        <img src={`./images/Picture.png`} alt="Picture_profile" />
                                     </div>
                                     </Tooltip>
                                     <div className='user__arrow'>
-                                        <img src={`/images/arrow.png`} alt="" />
+                                        <img src={`./images/arrow1.png`} alt="" />
                                     </div>
                                 </div>
                             </div>

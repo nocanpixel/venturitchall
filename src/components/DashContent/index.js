@@ -20,8 +20,8 @@ const events = [
     {
         id: 1,
         time: '10:30AM',
-        desc: 'Webinar: the basics of..',
-        img: '/images/thumbnail.png',
+        desc: 'Webinar : the basics of ...',
+        img: './images/thumbnail.png',
         cls: 'events__container1',
         tooltip: 'Webinar',
     },
@@ -29,7 +29,7 @@ const events = [
         id: 2,
         time: '2:15PM',
         desc: 'Team building Activity 🔥',
-        img: '/images/thumbnail.png',
+        img: './images/thumbnail.png',
         cls: 'events__container2',
         tooltip: 'Team building',
     }
@@ -69,19 +69,19 @@ const sliderData = [
     {
         id: 1,
         title: 'Youth Talent & Education',
-        date: 'May,20',
+        date: 'May, 20',
         badge: 'SCIENCE'
     },
     {
         id: 2,
         title: 'Lorem & Impsus lore',
-        date: 'Jun,13',
+        date: 'Jun, 13',
         badge: 'PRODUCTION'
     },
     {
         id: 3,
         title: 'Climbing To The Top',
-        date: 'Sep,1',
+        date: 'Sep, 1',
         badge: 'ART'
     },
 ]
@@ -167,7 +167,7 @@ export default function DashContent() {
                             <span className="current__learning">Currently Learning</span>
                             <div className="current__language">
                                 <div className="flag__">
-                                    <img style={{ width: '1em' }} src={`/images/united.png`} alt="" />
+                                    <img loading="lazy" style={{ width: '1em' }} src={`./images/united.png`} alt="" />
                                 </div>
                                 <div className="flag__name">
                                     English
@@ -178,11 +178,11 @@ export default function DashContent() {
                 </div>
                 <div className="dashboard__body">
                     <div className="deleteImg">
-                        <img className="bg__char" src={`/images/header-4.png`} alt="" />
+                        <img loading="lazy" className="bg__char" src={`./images/header-4.png`} alt="" />
                     </div>
                     <div className="char__container">
                         <div>
-                            <img className="char__3d" src={`/images/char3d.png`} alt="" />
+                            <img loading="lazy" className="char__3d" src={`./images/char3d.png`} alt="" />
                         </div>
                         <div className="text">
                             <h2>Welcome back, Clarence</h2>
@@ -210,7 +210,7 @@ export default function DashContent() {
                                         {sliderData.map((ele) => (
                                             <div key={ele.id} className="try">
                                                 <div>
-                                                    <img src={`/images/clock.png`} alt="" />
+                                                    <img loading="lazy" src={`./images/clock.png`} alt="" />
                                                 </div>
                                                 <div className="slider__content">
                                                     <div className="badge">
@@ -242,10 +242,10 @@ export default function DashContent() {
                                     </div>
                                     <div className="events__thumbs__right">
                                         {events.map((ele) => (
-                                            <Tooltip title={`${ele.tooltip}`}>
-                                                <div key={ele.id} style={{ cursor: 'pointer' }} className={`events__container ${ele.cls}`}>
+                                            <Tooltip key={ele.id} title={`${ele.tooltip}`}>
+                                                <div style={{ cursor: 'pointer' }} className={`events__container ${ele.cls}`}>
                                                     <div className="events__thumbs">
-                                                        <img src={`${ele.img}`} alt="" />
+                                                        <img loading="lazy" src={`${ele.img}`} alt="" />
                                                     </div>
                                                     <div className="text__container ">
                                                         <div className="time__event">
@@ -289,15 +289,22 @@ export default function DashContent() {
                                 <div className="all__here">
                                     <div className="tente__">
                                         <div className="activity__icon">
-                                            <img src={`/images/${ele.img}`} alt="" />
+                                            <img loading="lazy" src={`./images/${ele.img}`} alt="" />
                                         </div>
                                         <div className="accordion__title">
-                                            {ele.title}
+                                            {ele.id===1? (
+                                                <>
+                                                {ele.title} <span className="highlight"> Kathryn Crawdford</span> and <span className="highlight">Piper Shaw</span>
+                                                </>
+                                            ):(
+                                                <>
+                                                {ele.title}
+                                                </>
+                                            )}
                                         </div>
                                     </div>
-                                    <div>
-                                        <img src={`/images/${expanded === ele.pannel ? ele.arrow : 'arrow1.png'}`} alt="" />
-
+                                    <div className="accordion__arrow">
+                                        <img src={`./images/${expanded === ele.pannel ? ele.arrow : 'arrow1.png'}`} alt="" />
                                     </div>
                                 </div>
                             </AccordionSummary>
@@ -403,7 +410,7 @@ export default function DashContent() {
                                         ))}
                                     </Grid>
                                     <div className="card__footer">
-                                        <img style={{ width: '100%' }} src={`/images/oval.png`} alt="" />
+                                        <img loading="lazy" style={{ width: '100%' }} src={`./images/oval.png`} alt="" />
                                         <div className="text__card">
                                             <span style={{ color: 'white', fontWeight: 'bold' }}>Confirm your account details</span> Please confirm your email and phone number.😰
                                         </div>

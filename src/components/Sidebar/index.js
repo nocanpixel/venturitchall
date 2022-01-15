@@ -27,11 +27,11 @@ export default function Sidebar() {
                     <MenuIcon style={{color:'white'}} />
                 </div>
                 <div className='menu__items' style={{background:'#005dff'}}>
-                    <img src={`/images/homeActive.png`} alt="home" />
+                    <img src={`./images/homeActive.png`} alt="home" />
                 </div>
                 {sideMenu.map((ele)=> (
                     <div key={ele.id} className='menu__items'>
-                        <img src={`/images/${ele.img}`} alt="" />
+                        <img src={`./images/${ele.img}`} alt={`${ele.img}`} />
                     </div>
                 ))}
             </div>
