@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/venturitchall/static/css/main.0f41a999.css",
-    "main.js": "/venturitchall/static/js/main.9bb0f7d6.js",
+    "main.css": "/venturitchall/static/css/main.e1cb43f2.css",
+    "main.js": "/venturitchall/static/js/main.7b55511b.js",
     "static/js/787.68539f06.chunk.js": "/venturitchall/static/js/787.68539f06.chunk.js",
     "index.html": "/venturitchall/index.html",
-    "main.0f41a999.css.map": "/venturitchall/static/css/main.0f41a999.css.map",
-    "main.9bb0f7d6.js.map": "/venturitchall/static/js/main.9bb0f7d6.js.map",
+    "main.e1cb43f2.css.map": "/venturitchall/static/css/main.e1cb43f2.css.map",
+    "main.7b55511b.js.map": "/venturitchall/static/js/main.7b55511b.js.map",
     "787.68539f06.chunk.js.map": "/venturitchall/static/js/787.68539f06.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f41a999.css",
-    "static/js/main.9bb0f7d6.js"
+    "static/css/main.e1cb43f2.css",
+    "static/js/main.7b55511b.js"
   ]
 }
