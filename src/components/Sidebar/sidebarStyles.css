@@ -1,0 +1,27 @@
+.sidebar {
+    width: 50px;
+    height: 100vh;
+    position: fixed;
+    background-color: #3d84ff;
+    text-align: center;
+}
+
+.column__menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__items {
+    padding: 1em;
+    cursor: pointer;
+}
+
+.menu__items:hover {
+    background-color: #005dff;
+}
+
+@media screen and (max-width: 899.20px) {
+    .sidebar {
+        display: none;
+    }
+}

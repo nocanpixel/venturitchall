@@ -1,0 +1,214 @@
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar__all {
+    box-shadow: 0 1px 20px 0 rgba(75, 75, 75, 0.1);
+    background-color: white;
+}
+
+.navbar__ {
+    max-width: 98%;
+    margin: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.navbar__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__ .menu__ {
+    display: none;
+}
+
+.logo__ {
+    display: flex;
+}
+
+.search__bar {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    width: 57%;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+    font-size: 0.7rem;
+    background-color: #3d84ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+.navbar__ .profile__ {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.profile__name {
+    font-size: 0.8rem;
+    color: #3d396e;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.profile__user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile__user img {
+    width: 80%;
+}
+
+.profile__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.user_picture {
+    display: flex;
+    align-items: center;
+}
+
+.profile__notifications::after {
+    background: #3d84ff;
+    border-radius: 30px;
+    color: #fff;
+    content: attr(badge);
+    margin-top: 1rem;
+    border: 1px solid white;
+    margin-left: -0.2rem;
+    min-width: 0.4rem;
+    min-height: 0.4rem;
+    padding: 1px;
+    position: absolute;
+    text-align: center;
+}
+
+.search__app {
+    display: none;
+}
+
+.popover__ {
+    margin-top: 1em;
+}
+
+.thumb__pic {
+    display: flex;
+    align-items: center;
+}
+
+.thumbs__notifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1em;
+    padding: 0.3em;
+    cursor: pointer;
+}
+
+.thumbs__notifications:hover {
+    border-radius: 0.3em;
+    background: rgb(245, 245, 245);
+}
+
+.thumb__title {
+    color: var(--title-color);
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.thumb__date {
+    color: #9c9ab5;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .search__bar {
+        display: flex;
+        justify-content: flex-end;
+        height: 40px;
+        width: 46%;
+    }
+    .navbar__ {
+        max-width: 55rem;
+    }
+}
+
+@media screen and (max-width: 899.20px) {
+    .navbar__ {
+        max-width: 90%;
+        margin: auto;
+    }
+    .navbar__ .menu__ {
+        display: block;
+    }
+    .search__bar {
+        display: none;
+    }
+    .profile__buttons {
+        display: none;
+    }
+    .profile__name {
+        display: none;
+    }
+    .profile__user {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .user__arrow {
+        display: none;
+    }
+    .logo__ {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo__ img {
+        width: 80%;
+    }
+    .profile__user::after {
+        background: #3781ff;
+        border-radius: 30px;
+        color: #fff;
+        content: attr(badge);
+        margin-top: 2.9rem;
+        margin-left: 2.6rem;
+        min-width: 0.6rem;
+        min-height: 0.6rem;
+        padding: 2px;
+        position: absolute;
+        text-align: center;
+    }
+    .profile__user img {
+        width: 100%;
+    }
+    .search__app {
+        display: block;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        height: 5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
